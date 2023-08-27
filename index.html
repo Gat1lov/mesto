@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>Mesto</title>
+</head>
+
+<body class="root">
+
+    <header class="header">
+
+        <img class="header__logo" src="./images/logo.svg" alt="Место">
+
+    </header>
+
+
+    <main class="content">
+
+        <section class="profile">
+
+            <img class="profile__avatar" src="./images/kusto.jpg" alt="Кусто">
+            <div class="profile__profile-info">
+                <h1 class="profile__name" id="output-name">Жак-Ив Кусто</h1>
+                <button class="profile__edit-button" type="button" id="button-open-pop-up-profile"></button>
+                <p class="profile__prof" id="output-prof">Исследователь океана</p>
+            </div>
+            <button class="profile__add-button" id="button-open-pop-up-add-new-card" type="button"></button>
+
+        </section>
+
+        <section class="location-cards" id="location-cards">
+
+            <template id="location-card-template">
+                <div class="location-card">
+                    <button class="location-card__delete-button" id="location-card__delete-button"
+                        type="button"></button>
+                    <img class="location-card__image" id="button-open-pop-up-full-image" src=" " alt=" ">
+                    <div class="location-card__menu">
+                        <h2 class="location-card__name" id="location-card-name"></h2>
+                        <button class="location-card__like" type="button"></button>
+                    </div>
+                </div>
+            </template>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <p class="footer__copyright">© 2020 Mesto Russia</p>
+
+    </footer>
+
+    <div class="pop-up" id="pop-up-profile">
+        <div class="pop-up__container">
+            <h2 class="pop-up__name">Редактировать профиль</h2>
+            <form class="pop-up__form" id="body-form" action="html/sendform" name="body-form">
+                <div class="pop-up__input-container">
+                    <input class="pop-up__input" required minlength="2" maxlength="40" id="input-name" type="text" placeholder="Введите имя"
+                        name="name">
+                    <div class="pop-up__error-message" id="input-name-error"></div>
+                </div>
+                <div class="pop-up__input-container">
+                    <input class="pop-up__input" required minlength="2" maxlength="200" id="input-job" type="text"
+                        placeholder="Введите род деятельности" name="job">
+                    <div class="pop-up__error-message" id="input-job-error"></div>
+                </div>
+                <button class="pop-up__button" id="input-button" type="submit">Сохранить</button>
+            </form>
+            <button class="pop-up__close-pop-up" id="button-close-pop-up-profile" type="button"></button>
+        </div>
+    </div>
+
+    <div class="pop-up" id="pop-up-add-new-card">
+        <div class="pop-up__container">
+            <h2 class="pop-up__name">Новое Место</h2>
+            <form class="pop-up__form" id="add-card-form" action="html/sendform" name="body-form">
+                <div class="pop-up__input-container">
+                    <input class="pop-up__input" required minlength="2" maxlength="30" id="input-add-name" type="text" placeholder="Название"
+                        name="place-name">
+                    <div class="pop-up__error-message" id="input-add-name-error"></div>
+                </div>
+                <div class="pop-up__input-container">
+                    <input class="pop-up__input" required id="input-add-url" type="url" placeholder="Ссылка на картинку"
+                        name="link-addres">
+                    <div class="pop-up__error-message" id="input-add-url-error"></div>
+                </div>
+                <button class="pop-up__button" id="input-add-button" type="submit">Создать</button>
+            </form>
+            <button class="pop-up__close-pop-up" id="button-close-pop-up-add-new-card" type="button"></button>
+        </div>
+    </div>
+
+
+    <div class="pop-up" id="pop-up-full-image">
+        <div class="pop-up__content">
+            <img class="pop-up__image" id="pop-up-image-addres" src=" " alt=" ">
+            <h2 class="pop-up__describe" id="pop-up-describe"></h2>
+            <button class="pop-up__close-pop-up" id="button-close-pop-up-full-image" type="button"></button>
+        </div>
+    </div>
+
+    <script src="./scripts/cards.js"></script>
+    <script src="./scripts/validate.js"></script>
+    <script src="./scripts/index.js"></script>
+    
+
+
+</body>
+
+</html>

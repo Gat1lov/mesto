@@ -1,0 +1,20 @@
+.location-card__delete-button{
+    position: absolute;
+    background-image: url(../../../images/Trash.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    top: 20px;
+    right: 20px;
+    opacity: 1;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 19px;
+    width: 18px;
+    transition: all .5s ease;
+}
+
+.location-card__delete-button:hover{
+    opacity: .6;
+}
